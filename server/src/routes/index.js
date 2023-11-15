@@ -11,8 +11,10 @@
 // }
 
 const pageRouter = require('./page');
-
+const postRouter = require('./post');
 function route(app){
     app.use('/data',pageRouter);
+    app.use('/post',postRouter);
+    
 }
 module.exports = route;

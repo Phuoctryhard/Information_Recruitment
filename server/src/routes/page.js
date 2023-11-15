@@ -7,4 +7,5 @@ const FanpageController = require('../app/controllers/FageController');
 router.get('/',FanpageController.show);
 router.get('/view',FanpageController.index);
 router.get('/react',FanpageController.react);
+
 module.exports = router;
