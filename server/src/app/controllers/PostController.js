@@ -10,16 +10,11 @@ class PostController{
 getbyid(req, res, next) {
     const idd = req.params.id;
     console.log(idd);
-        Posts.findOne({id:idd})
+        Posts.findById({id:idd})
             .then(element => {
-                if (!element) {
-                    const error = new Error('Không tìm thấy bài viết');
-                    error.status = 404;
-                    throw error;
-                }
-
+                console.log(element);
                 res.json(element);
-                console.log(element.text);
+              
             })
             .catch(next);
         }
