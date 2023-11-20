@@ -9,12 +9,12 @@
 //     app.get('/page',(req,res)=>{
 //     })
 // }
-
 const pageRouter = require('./page');
 const postRouter = require('./post');
+const companyRouter = require('./company');
 function route(app){
     app.use('/data',pageRouter);
     app.use('/post',postRouter);
-    
+    app.use('/company',companyRouter); 
 }
 module.exports = route;
